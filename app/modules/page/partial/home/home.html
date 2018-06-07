@@ -1,0 +1,23 @@
+<div class="col-md-12" ng-controller="HomeCtrl as $hmCtrl">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Group</th>
+            <th scope="col">User</th>
+            <th scope="col">Message</th>
+            <th scope="col">Created</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $hmCtrl.listMessage">
+            <th>{{item.id}}</th>
+            <td>{{item.group.group_name }}</td>
+            <td>{{item.user.first_name + ' ' + item.user.last_name}}</td>
+            <td>{{item.message_content}}</td>
+            <td>{{item.created_at | date: "MM/dd/yyyy 'at' h:mma"}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

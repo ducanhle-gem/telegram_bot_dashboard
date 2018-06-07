@@ -1,0 +1,39 @@
+.idea/*
+.DS_Store
+
+# CMake
+cmake-build-debug/
+
+## File-based project format:
+*.iws
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+# App vendor
+# app/index.html
+app/config.js
+app/ga.js
+app/vendor/
+app/dist/
+app/tmp/
+app/temp_assets/
+.sass-cache/
+build/tmp/
+build/dist/
+build/gulp.config.js
+
+# Node modules
+node_modules/
