@@ -5,6 +5,10 @@ angular.module('page').config(function($stateProvider) {
         url: '/',
         templateUrl: 'modules/page/partial/home/home.html'
     });
+    $stateProvider.state('hour-stat', {
+        url: '/hour-stats',
+        templateUrl: 'modules/page/partial/hour-stat/hour-stat.html'
+    });
     /* Add New States Above */
 
 });
