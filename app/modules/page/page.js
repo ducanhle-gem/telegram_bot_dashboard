@@ -11,11 +11,11 @@ angular.module('page').config(function($stateProvider) {
     });
     $stateProvider.state('users', {
         url: '/users',
-        templateUrl: 'modules/page/partial/users//users.html'
+        templateUrl: 'modules/page/partial/users/users.html'
     });
     $stateProvider.state('groups', {
         url: '/groups',
-        templateUrl: 'modules/page/partial/groups//groups.html'
+        templateUrl: 'modules/page/partial/groups/groups.html'
     });
     /* Add New States Above */
 
