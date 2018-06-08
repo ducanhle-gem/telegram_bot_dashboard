@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html ng-app="telegrambotStat">
 <head>
-    <title></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
 
-    <title>telegrambot_stat</title>
+    <title>Telegram dashboard</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css styles/vendor.css -->
@@ -49,10 +48,10 @@
                 <a ui-sref="hour-stat">Hourly Stat</a>
             </li>
             <li>
-                <a href="#">Users</a>
+                <a ui-sref="users">Users</a>
             </li>
             <li>
-                <a href="#">Groups</a>
+                <a ui-sref="groups">Groups</a>
             </li>
         </ul>
     </div>
@@ -122,6 +121,8 @@
 <script src="modules/page/page.js"></script>
 <script src="modules/page/partial/home/home.js"></script>
 <script src="modules/page/partial/hour-stat/hour-stat.js"></script>
+<script src="modules/page/partial/users/users.js"></script>
+<script src="modules/page/partial/groups/groups.js"></script>
 <!-- Add New Component JS Above -->
 
 <!-- endbuild -->

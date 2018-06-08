@@ -9,6 +9,14 @@ angular.module('page').config(function($stateProvider) {
         url: '/hour-stats',
         templateUrl: 'modules/page/partial/hour-stat/hour-stat.html'
     });
+    $stateProvider.state('users', {
+        url: '/users',
+        templateUrl: 'modules/page/partial/users//users.html'
+    });
+    $stateProvider.state('groups', {
+        url: '/groups',
+        templateUrl: 'modules/page/partial/groups//groups.html'
+    });
     /* Add New States Above */
 
 });

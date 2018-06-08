@@ -4,18 +4,26 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Group</th>
-            <th scope="col">User</th>
-            <th scope="col">Message</th>
-            <th scope="col">Created</th>
+            <th scope="col">Total Users</th>
+            <th scope="col">Total Messages</th>
+            <th scope="col">Total Photos</th>
+            <th scope="col">Total Videos</th>
+            <th scope="col">New User Count</th>
+            <th scope="col">Left User Count</th>
+            <th scope="col">Time</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="item in $hrCtrl.listStats">
             <th>{{item.id}}</th>
             <td>{{item.group.group_name }}</td>
-            <td>{{item.user.first_name + ' ' + item.user.last_name}}</td>
-            <td>{{item.message_content}}</td>
-            <td>{{item.created_at | date: "MM/dd/yyyy 'at' h:mma"}}</td>
+            <td>{{item.total_users}}</td>
+            <td>{{item.total_messages}}</td>
+            <td>{{item.total_photos}}</td>
+            <td>{{item.total_videos}}</td>
+            <td>{{item.new_user_count}}</td>
+            <td>{{item.left_user_count}}</td>
+            <td>{{item.scrape_time | date: "MM/dd/yyyy 'at' h:mma"}}</td>
         </tr>
         </tbody>
     </table>

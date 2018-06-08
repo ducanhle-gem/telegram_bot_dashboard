@@ -1,0 +1,19 @@
+<div class="col-md-12" ng-controller="GroupsCtrl as $grpCtrl">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Group name</th>
+            <th scope="col">Telegram id</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $grpCtrl.groupList">
+            <th>{{item.id}}</th>
+            <td>{{item.group_name }}</td>
+            <td>{{item.telegram_id}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>

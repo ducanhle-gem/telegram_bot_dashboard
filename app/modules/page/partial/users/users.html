@@ -1,0 +1,21 @@
+<div class="col-md-12" ng-controller="UsersCtrl as $usrCtrl">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Username</th>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $usrCtrl.userList">
+            <th>{{item.id}}</th>
+            <td>{{item.username }}</td>
+            <td>{{item.first_name}}</td>
+            <td>{{item.last_name}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
