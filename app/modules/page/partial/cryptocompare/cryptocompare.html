@@ -1,0 +1,57 @@
+<div class="col-md-12" ng-controller="CryptocompareCtrl as $ccCtrl">
+    <h1>Crypto compare</h1>
+    <ul uib-pagination boundary-links="true" total-items="$ccCtrl.totalItems" ng-change="$ccCtrl.pageChanged()"
+        ng-model="$ccCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$ccCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
+
+    </ul>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Max Supply</th>
+            <th scope="col">Current Supply</th>
+            <th scope="col">Fund Raise USD</th>
+            <th scope="col">Token Percentage For Investors</th>
+            <th scope="col">Points</th>
+            <th scope="col">Total Views</th>
+            <th scope="col">Overview Views</th>
+            <th scope="col">Forum Views</th>
+            <th scope="col">Comments</th>
+            <th scope="col">Followers</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $ccCtrl.listStats">
+            <th>{{item.id}}</th>
+            <td>{{item.ico.name }}</td>
+            <td>{{item.ico.token }}</td>
+            <td>{{item.max_supply | currency: item.ico.token + ' ' : 0}}</td>
+            <td>{{item.current_supply | number}}</td>
+            <td>{{item.fund_raise_usd | currency: '$': 0}}</td>
+            <td>{{item.token_percentage_for_investors}}%</td>
+            <td>{{item.points}}</td>
+            <td>{{item.total_views}}</td>
+            <td>{{item.overview_views}}</td>
+            <td>{{item.forum_views}}</td>
+            <td>{{item.comments}}</td>
+            <td>{{item.followers}}</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul uib-pagination boundary-links="true" total-items="$ccCtrl.totalItems" ng-change="$ccCtrl.pageChanged()"
+        ng-model="$ccCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$ccCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
+
+    </ul>
+
+    <span us-spinner spinner-on="$ccCtrl.showSpinner" spinner-theme="fixedTheme"></span>
+
+</div>

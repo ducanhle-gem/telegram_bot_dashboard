@@ -17,6 +17,14 @@ angular.module('page').config(function($stateProvider) {
         url: '/groups',
         templateUrl: 'modules/page/partial/groups/groups.html'
     });
+    $stateProvider.state('coinmarketcap', {
+        url: '/coinmarketcap',
+        templateUrl: 'modules/page/partial/coinmarketcap/coinmarketcap.html'
+    });
+    $stateProvider.state('cryptocompare', {
+        url: '/cryptocompare',
+        templateUrl: 'modules/page/partial/cryptocompare/cryptocompare.html'
+    });
     /* Add New States Above */
 
 });

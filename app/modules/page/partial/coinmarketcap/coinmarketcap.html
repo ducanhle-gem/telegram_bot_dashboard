@@ -1,0 +1,55 @@
+<div class="col-md-12" ng-controller="CoinmarketcapCtrl as $cmCtrl">
+    <h1>Coin Market Cap</h1>
+    <ul uib-pagination boundary-links="true" total-items="$cmCtrl.totalItems" ng-change="$cmCtrl.pageChanged()"
+        ng-model="$cmCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$cmCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
+
+    </ul>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Symbol</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">Price</th>
+            <th scope="col">Max Supply</th>
+            <th scope="col">Total Supply</th>
+            <th scope="col">Volume (24h)</th>
+            <th scope="col">Circulating Supply</th>
+            <th scope="col">Change (1h)</th>
+            <th scope="col">Change (24h)</th>
+            <th scope="col">Change (7d)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="item in $cmCtrl.listStats">
+            <th>{{item.rank}}</th>
+            <td>{{item.ico.name }}</td>
+            <td>{{item.ico.token }}</td>
+            <td>{{item.market_cap | currency: '$': 0}}</td>
+            <td>{{item.price | currency}}</td>
+            <td>{{item.max_supply | currency: item.ico.token + ' ' : 0}}</td>
+            <td>{{item.total_supply | number}}</td>
+            <td>{{item.volume_24h | currency: '$': 0}}</td>
+            <td>{{item.circulating_supply | currency: item.ico.token + ' ' : 0}}</td>
+            <td>{{item.percent_change_1h}}%</td>
+            <td>{{item.percent_change_24h}}%</td>
+            <td>{{item.percent_change_7d}}%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <ul uib-pagination boundary-links="true" total-items="$cmCtrl.totalItems" ng-change="$cmCtrl.pageChanged()"
+        ng-model="$cmCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$cmCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
+
+    </ul>
+
+    <span us-spinner spinner-on="$cmCtrl.showSpinner" spinner-theme="fixedTheme"></span>
+
+</div>

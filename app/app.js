@@ -1,6 +1,6 @@
-angular.module('telegrambotStat', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'templates', 'page']);
+angular.module('telegrambotStat', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'templates', 'angularSpinner', 'page']);
 
-angular.module('telegrambotStat').config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('telegrambotStat').config(function($stateProvider, $urlRouterProvider, $locationProvider, usSpinnerConfigProvider) {
     $locationProvider.html5Mode({
       enabled: true,
       requireBase: false
@@ -8,6 +8,8 @@ angular.module('telegrambotStat').config(function($stateProvider, $urlRouterProv
 
     /* Add New States Above */
     $urlRouterProvider.otherwise('/home');
+
+    usSpinnerConfigProvider.setTheme('fixedTheme', {radius:20, width:5, length: 10, top: '50%', left: '50%', position: 'fixed', transform: 'translate(-50%, -50%)'});
 
 });
 
