@@ -1,4 +1,12 @@
 <div class="col-md-12" ng-controller="GroupsCtrl as $grpCtrl">
+    <h1>Telegram groups</h1>
+    <ul uib-pagination boundary-links="true" total-items="$grpCtrl.totalItems" ng-change="$grpCtrl.pageChanged()"
+        ng-model="$grpCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$grpCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
+
+    </ul>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -15,5 +23,12 @@
         </tr>
         </tbody>
     </table>
+    <ul uib-pagination boundary-links="true" total-items="$grpCtrl.totalItems" ng-change="$grpCtrl.pageChanged()"
+        ng-model="$grpCtrl.currentPage" class="pagination pull-right" first-text="&laquo;" last-text="&raquo;"
+        next-text="&rsaquo;" previous-text="&lsaquo;"
+        boundary-link-numbers="true" rotate="false" items-per-page="$grpCtrl.perPage"
+        max-size="3" template-url="modules/page/partial/pagination-template.html">
 
+    </ul>
+    <span us-spinner spinner-on="$grpCtrl.showSpinner" spinner-theme="fixedTheme"></span>
 </div>
